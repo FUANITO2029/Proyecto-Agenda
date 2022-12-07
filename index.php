@@ -1,14 +1,14 @@
 <?php
-    /*/
+    
     session_start();
 
     // Verificamos si hay sésion de usuairo
     
-    if (isset($_SESSION['admin'])){
+    if (isset($_SESSION["uso_nombre"])){
+        print "<p>Bien venido $_SESSION[uso_nombre] <P>\n";
     }else {
-        header('Location: registrar.php');
+        header('Location: acceder.php');
     } 
-    */
 
     include_once 'conexion.php';
     
