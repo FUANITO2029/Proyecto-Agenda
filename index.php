@@ -24,12 +24,6 @@
     <title>Proyecto calendario 🤣</title>
 </head>
 <body>
-    <span>hola</span>
-
-    
-        <a href="cerrar_sesion.php">
-            <button>Cerrar sesión</button>
-        </a>
 
 </body>
 </html>
