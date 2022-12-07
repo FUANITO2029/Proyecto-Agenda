@@ -1,6 +1,6 @@
 <?php
 
-    $link = 'mysql:host=localhost; dbname=calendario';
+    $link = 'mysql:host=localhost; dbname=agenda';
     $usuario = 'root';
     $pass = 'root';
 
