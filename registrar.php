@@ -18,7 +18,7 @@
             <input type="text" name="usu_correo" id="correo" placeholder="Escribe tu correo">
 
             <label for="contrasena">Contraseña</label>
-            <input type="pass" name="usu_contr" id="contrasena" placeholder="Escribe tu contraseña">
+            <input type="pass" name="usu_contrasena" id="contrasena" placeholder="Escribe tu contraseña">
 
             <button type="submit">Registar</button>
         </form>
