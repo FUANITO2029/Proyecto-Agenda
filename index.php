@@ -5,7 +5,7 @@
     // Verificamos si hay sésion de usuairo
     
     if (isset($_SESSION["uso_nombre"])){
-        print "<p>Bien venido $_SESSION[uso_nombre] <P>\n";
+        //print "<p>Bien venido $_SESSION[uso_nombre] <P>\n";
     }else {
         header('Location: acceder.php');
     } 
@@ -32,12 +32,14 @@
         <div>
           <img src="./IMG/user.png" class="usu-img">
         </div>
-        <div class="usu-nombre">Jorge Ben</div>
+        <div class="usu-nombre"><?php print "<p>$_SESSION[uso_nombre]</p>" ?></div>
       </div>
       <div class="boton-div">
+        <a href="./cerrar_sesion.php">
         <button class="cerrar-sesion">
           Cerrar sesión
         </button>
+        </a>
       </div>
       <div class="clima"></div>
     </div>
