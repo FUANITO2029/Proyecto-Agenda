@@ -1,0 +1,136 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Ubuntu', sans-serif;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.menu-izquierdo{
+  background-color: rgb(57, 18, 78);
+  width: 20%;
+  height: 100vh;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+}
+
+.usuario{
+  padding: 10px;
+  
+}
+
+.usu-img{
+  width: 70px;
+  height: 70px;
+  display: block;
+  margin: 15px 15px ;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.usu-nombre{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: white;
+}
+
+.boton-div{
+  display: flex;
+  justify-content: center;
+}
+
+.cerrar-sesion{
+  background-color:rgb(16, 7, 79); /* Green */
+  border: none;
+  color: white;
+  margin-top: 20px;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition-duration: 0.4s;
+  align-items: center;
+  left: 50%;
+}
+
+.cerrar-sesion:hover {
+  background-color: white;
+  border: 1px solid; 
+  border-color: black;
+  color: black;
+}
+
+.principal{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.mes{
+  height: 15%;
+  width: 95%;
+  margin: 15px;
+  background-color: rgb(81, 29, 160);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.botones{
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 20px;
+  
+}
+
+.sig-ant-btn{
+  width: 50%;
+  margin: 1px;
+  border-radius: 5px;
+  background-color:rgb(16, 7, 79); 
+  border: none;
+  color: white;
+  display: block;
+  transition-duration: 0.4s;
+  align-items: center;
+}
+
+.sig-ant-btn:hover {
+  background-color: white;
+  border: 1px solid; 
+  border-color: black;
+  color: black;
+}
+
+.mes-nombre{
+  padding: 20px;
+  font-size: 40px;
+  font-weight: 700;
+  width: 70%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.entradas {
+  height: 80%;
+  width: 95%;
+  margin: 15px;
+  box-sizing: border-box;
+}
+
