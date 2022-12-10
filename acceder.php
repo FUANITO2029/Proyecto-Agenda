@@ -4,21 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/style2.css">
     <title>Iniciar Sesión</title>
 </head>
 <body>
-    <div class="iniciar_session">
-        <form action="iniciar_sesion.php" method="POST">
-            <label for="usuario">Usuario</label>
-            <input type="text" name="usu_nombre" id="usuario" placeholder="Nombre de usuario">
+    <div class="iniciar_sesion">
+        <div class="contenedor"> 
+            <div class="encabezado">
+                <h1>INICIA SESIÓN</h1>
+            </div>
 
-            <label for="contrasena">Contraseña</label>
-            <input type="pass" name="usu_contrasena" id="contrasena" placeholder="Contraseña">
+            <form action="iniciar_sesion.php" method="POST" class="form">
+                <p>
+                    <label for="usuario">Nombre</label><br>
+                    <input type="text" name="usu_nombre" id="usuario" placeholder="Escribe tu nombre de usuario">
+                </p>
+                
+                <p>
+                    <label for="contrasena">Contraseña</label><br>
+                    <input type="pass" name="usu_contrasena" id="contrasena" placeholder="Escribe tu contraseña">
+                </p>
+                
+                <p class="boton">
+                    <button type="submit">ACCEDER</button>
+                </p>            
+            </form>
 
-            <button type="submit">Acceder</button>
-        </form>
+            <p class="registrar"><a href="registrar.php">Crear una nueva cuenta</a></p>
 
-        <span><a href="registrar.php">Crear cuenta</a></span>
+        </div>
     </div>
 </body>
 </html>
