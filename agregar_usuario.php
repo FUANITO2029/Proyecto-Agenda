@@ -8,6 +8,20 @@
     //$contrasena = password_hash($contrasena, PASSWORD_DEFAULT);
     //echo $contrasena;
 
+    if ($nuevo_usuario == null){
+        echo 'ERROR: ESCRIBA UN NOMBRE DE USUARIO';
+        header('refresh:2, ./registrar.php');
+        die();
+    }else if($correo == null){
+        echo 'ERROR: ESCRIBA UN CORREO';
+        header('refresh:2, ./registrar.php');
+        die();
+    }else if($contrasena == null){
+        echo 'ERROR: ESCRIBA UNA CONTRASENA';
+        header('refresh:2, ./registrar.php');
+        die();
+    }   
+    
     // Verificar si el usuairo existe
     $sql = 'SELECT * FROM usuarios WHERE usu_nombre = ?';
     $sentencia_sql = $pdo->prepare($sql);
@@ -16,8 +30,8 @@
 
     if($resultado){
         echo 'EL NOMBRE DEL USUARIO YA EXISTE';
-        //die();
         header('refresh:2, ./registrar.php');
+        die(); 
     }else{
         $sql_agregar = 'INSERT INTO usuarios(usu_nombre, usu_correo, usu_contrasena) VALUES (?,?,?)';
         $sentencia_agregar = $pdo->prepare($sql_agregar);
