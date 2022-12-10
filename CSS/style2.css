@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+ }
+  
+  body{
+    font-family: 'Ubuntu', sans-serif;
+    height: 100vh;
+    width: 100%;
+}
+
+.iniciar_sesion{
+    background-color: rgba(84, 78, 239, 0.785);
+    background-size : contain;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.regisrar_sesion{
+    background-color: rgba(84, 78, 239, 0.785);
+    background-size : contain;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor{
+    width: 35%;
+    height: 60%;
+    background-color: white;
+    box-shadow: 3px 4px rgba(0, 0, 0, 0.219);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.encabezado{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+}
+
+.form{
+    padding: 10%;
+    width: 80%;
+    height: 60%;
+}
+
+.form label{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.form input{
+    width: 99%;
+    height: 25px;
+    margin-bottom: 25px;
+    font-size: 15px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: rgba(0, 0, 0, 0.15);
+    color: rgba(0, 0, 0, 0.7);
+    outline: none;
+}
+
+.form input::placeholder{
+    color: rgba(0, 0, 0, 0.15);
+    font-size: 13px;
+}
+
+.boton{
+    text-align: center;
+    padding-bottom: 5px;
+    height: 25%;
+}
+
+form button{
+    color: white;
+    background-color: violet;
+    font-size: 15px;
+    border-radius: 10px;
+    width: 40%;
+    height: 75%;
+    margin-top: 20px;
+    border-color: rgba(255, 255, 255, 0);
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+form button:hover{
+    background-color: rgb(255, 255, 255);
+    color: violet;
+    width: 42%;
+    height: 77%;
+}
+
+.registrar{
+    width: 100%;
+    height: 10%;
+    text-align: center;
+}
+
+.registrar a{
+    font-size: 12px;
+    color: gray;
+}

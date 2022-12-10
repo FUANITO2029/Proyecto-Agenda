@@ -16,8 +16,8 @@
 
     if($resultado){
         echo 'EL NOMBRE DEL USUARIO YA EXISTE';
-        die();
-        header('refresh:2, ./index.php');
+        //die();
+        header('refresh:2, ./registrar.php');
     }else{
         $sql_agregar = 'INSERT INTO usuarios(usu_nombre, usu_correo, usu_contrasena) VALUES (?,?,?)';
         $sentencia_agregar = $pdo->prepare($sql_agregar);
