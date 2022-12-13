@@ -88,13 +88,16 @@
         </div>
       </div>
       <div class="entradas">
+        <?php 
+          while($row = mysqli_fetch_array($query)){
+        ?>
         <div class="entrada">
           <div class="ent-header">
-            <div class="ent-titulo"><p> Lorem acilis. Facilis, perferendis!</p></div>
+            <div class="ent-titulo"><p><?php echo $row['fech_titulo'] ?></p></div>
             <div class="ent-det">
               <div class="hora-fech">
-                <div class="ent-fecha">10-12-22</div>
-                <div class="ent-hora">18:00:00</div>
+                <div class="ent-fecha"><?php echo $row['fech_dia'] ?></div>
+                <div class="ent-hora"><?php echo $row['fech_hora'] ?></div>
               </div>
               <div class="btns-ent">
                 <button class="btn-ent"> <i class="fa-solid fa-pen-to-square fa-xl"></i> </button>
@@ -103,10 +106,13 @@
           </div>
           </div>
           <div class="ent-desc">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero minus, necessitatibus quia laudantium incidunt ratione sapiente, eius provident perferendis voluptatibus dicta culpa et doloribus sint iure voluptas maiores vel aspernatur!
+            <?php echo $row['fech_des'] ?>
           </div>
           
         </div>
+        <?php 
+          } 
+        ?>
       </div>
       <section class="modal">
         <div class="modal-container">
