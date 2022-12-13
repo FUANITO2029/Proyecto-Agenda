@@ -92,7 +92,7 @@
             <?php  for($i=1990;$i<=2030;$i++) { echo "<option value='".$i."'>".$i."</option>"; } ?>
           </select>
           <button class="btn-ent">
-            <i class="fa-solid fa-magnifying-glass fa-2xl"></i>
+          <i class="fa-solid fa-magnifying-glass fa-2xl"></i>
           </button>
         </div>
         <div class="agregar">

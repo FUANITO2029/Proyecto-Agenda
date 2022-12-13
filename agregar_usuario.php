@@ -37,8 +37,6 @@
         $sql_agregar = 'INSERT INTO usuarios(usu_nombre, usu_correo, usu_contrasena) VALUES (?,?,?)';
         $sentencia_agregar = $pdo->prepare($sql_agregar);
         $sentencia_agregar->execute(array($nuevo_usuario, $correo, $contrasena));
-
-        echo 'SE REGISTRÓ UN NUEVO EVENTO';
         
         // Destruir las variables de conexión 
         $sentencia_agregar = null;
@@ -47,6 +45,6 @@
         session_start();
         $_SESSION["uso_nombre"] = $nuevo_usuario;
 
-        header('refresh:2, ./index.php');
+        header('refresh:0, ./index.php');
     } 
 ?>

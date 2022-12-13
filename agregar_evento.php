@@ -36,12 +36,9 @@
     $sql_agregar = "INSERT INTO fechas(fech_dia, fech_hora, fech_des, fech_titulo, fech_usu_id) VALUES (?, ?, ?, ?, ?)";
     $sentencia_agregar = $pdo->prepare($sql_agregar);
     $sentencia_agregar->execute(array($fech_dia, $fech_hora, $fech_des, $fech_titulo, $fech_usu_id));
-
-    echo $fech_dia, $fech_hora, $fech_des, $fech_titulo, $fech_usu_id;
-    echo 'SE REGISTRÓ UN NUEVO EVENTO';
         
     // Destruir las variables de conexión 
     $sentencia_agregar = null;
     $pdo = null;
 
-    header('refresh:2, ./index.php');
+    header('refresh:0, ./index.php');
