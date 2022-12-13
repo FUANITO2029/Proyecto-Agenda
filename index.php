@@ -75,7 +75,7 @@
         <div class="agenda-titulo">
           <h1>Agenda Personal</h1>
         </div>
-        <div class="selects">
+        <!-- <div class="selects">
           <select name="mes" id="mes" class="select-css">
             <option value="01">Enero</option>
             <option value="02">Febrero</option>
@@ -97,7 +97,7 @@
           <button class="btn-ent">
           <i class="fa-solid fa-magnifying-glass fa-2xl"></i>
           </button>
-        </div>
+        </div> -->
         <div class="agregar">
           <button class="btn-agregar">
             <i class="fa-solid fa-plus fa-2xl">

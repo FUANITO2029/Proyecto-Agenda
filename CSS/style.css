@@ -88,8 +88,7 @@ body{
   background-color: rgb(81, 29, 159);
   border-radius: 10px;
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: flex-end;
+  justify-content: space-around;
   align-items: center;
 }
 
