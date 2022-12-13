@@ -37,7 +37,7 @@
         $sentencia_agregar = $pdo->prepare($sql_agregar);
         $sentencia_agregar->execute(array($nuevo_usuario, $correo, $contrasena));
 
-        echo 'SE REGISTRÓ UN NUEVO USUARIO';
+        echo 'SE REGISTRÓ UN NUEVO EVENTO';
         
         // Destruir las variables de conexión 
         $sentencia_agregar = null;

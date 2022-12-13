@@ -8,7 +8,7 @@
         //print "<p>Bien venido $_SESSION[uso_nombre] <P>\n";
     }else {
         header('Location: acceder.php');
-    } 
+    }
 
     include_once 'conexion.php';
     
@@ -67,28 +67,70 @@
       <div class="mes">
         <div class="botones">
           <button class="sig-ant-btn">
-            <i class="fa-solid fa-angle-left fa-2xl"></i>             
-            <a href="#"></a>
+            <i class="fa-solid fa-angle-left fa-2xl">
+              <a href="#"></a>
+            </i>             
           </button>
           <button class="sig-ant-btn"> 
-            <i class="fa-solid fa-angle-right fa-2xl"></i>
+            <i class="fa-solid fa-angle-right fa-2xl">
+              <a href="#"></a>
+            </i>
           </button>
         </div>
         <div class="mes-nombre">
           Diciembre
         </div>
+        <div class="agregar">
+          <button class="btn-agregar">
+            <i class="fa-solid fa-plus fa-2xl">
+            </i>
+          </button>
+        </div>
       </div>
       <div class="entradas">
         
       </div>
+
+      <section class="modal">
+        <div class="modal-container">
+          <form action="agregar_evento.php" method="POST" class="form-modal">
+            <h2 class="form-title">
+              Agregar un evento
+            </h2>
+            <br>
+            <label for="fech_titulo">Nombre del evento:</label>
+            <input type="text" name="fech_titulo" id="fech_titulo">
+            <br>
+            <label for="fech_dia">Dia del evento:</label>
+            <input type="date" name="fech_dia" id="fech_dia">
+            <br>
+            <label for="fech_hora">Hora del evento:</label>
+            <input type="time" name="fech_hora" id="fech_hora">
+            <br>
+            <label for="fech_des">Descripción del evento:</label>
+            <input type="text" name="fech_des" id="fech_des">
+            <br>
+            <div class="btn-form">
+              <button class="btn-form-ind add" type="submit">
+                Agregar evento &nbsp;<i class="fa-solid fa-floppy-disk"></i>
+              </button>
+              <button class="btn-form-ind cancel">
+                Cancelar &nbsp;<i class="fa-solid fa-ban"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+
     </div>
 </body>
 
+<script src="JS/app.js"></script>
 <script src="https://kit.fontawesome.com/a552314827.js" crossorigin="anonymous"></script>
 
 </html>
 
-<script>
+<script src="">
 /*const temperatura = document.getElementById('temperatura')
 const locacion = document.getElementById('locacion')
 const humedad = document.getElementById('humedad')

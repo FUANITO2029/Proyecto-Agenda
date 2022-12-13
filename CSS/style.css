@@ -96,7 +96,6 @@ body{
   flex-direction: row;
   flex-wrap: nowrap;
   padding: 20px;
-  
 }
 
 .sig-ant-btn{
@@ -118,11 +117,39 @@ body{
   color: black;
 }
 
+.agregar{
+  width: 10%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 20px;
+}
+
+.btn-agregar{
+  width: 100%;
+  margin: 1px;
+  border-radius: 5px;
+  background-color:rgb(16, 7, 79); 
+  border: none;
+  color: white;
+  display: block;
+  transition-duration: 0.4s;
+  align-items: center;
+  cursor: pointer;
+}
+
+.btn-agregar:hover{
+  background-color: white;
+  border: 1px solid; 
+  border-color: black;
+  color: black;
+}
+
 .mes-nombre{
   padding: 20px;
   font-size: 40px;
   font-weight: 700;
-  width: 70%;
+  width: 60%;
   text-align: center;
   display: flex;
   align-items: center;
@@ -171,4 +198,80 @@ body{
   font-size: 45px;
   margin: 5px;
   color: rgb(57, 18, 78);
+}
+
+.modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #111111bd;
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .6s;
+}
+
+.modal--show{
+  opacity: 1;
+  pointer-events: unset;
+  transition: opacity .6s;
+}
+
+.modal-container{
+  margin: auto;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90%;
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 3em 2.5em;
+}
+
+.form-modal{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: space-around;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.btn-form{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.btn-form-ind{
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.add{
+  border-color: #04AA6D;
+  color: green;
+}
+
+.add:hover{
+  background-color: #04AA6D;
+  color: white;
+}
+
+.cancel{
+  border-color: #ff9800;
+  color: orange;
+}
+
+.cancel:hover{
+  background: #ff9800;
+  color: white;
 }
