@@ -118,8 +118,8 @@
                 <div class="ent-hora"><?php echo $row['fech_hora'] ?></div>
               </div>
               <div class="btns-ent">
-                <button class="btn-ent"> <i class="fa-solid fa-pen-to-square fa-xl"></i> </button>
-                <button class="btn-ent"> <i class="fa-solid fa-trash fa-xl"></i> </i></button>
+                <a href="actualizar.php?id=<?php echo $row['fech_id'] ?>&usu=<? echo $row['fech_usu_id']?>" class="btn-ent"> <i class="fa-solid fa-pen-to-square fa-xl"></i> </a>
+                <a href="delete.php?id=<?php echo $row['fech_id'] ?>&usu=<? echo $row['fech_usu_id']?>" class="btn-ent"> <i class="fa-solid fa-trash fa-xl"></i> </i></a>
               </div>
           </div>
           </div>
