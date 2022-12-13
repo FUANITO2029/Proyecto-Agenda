@@ -14,11 +14,11 @@
     include_once 'conexion2.php';
     $conn = conectar();
     $id = $_SESSION["usu_id"];
-    $sql = "SELECT fechas.* 
-    FROM fechas 
-      INNER JOIN usuarios 
-        ON fech_usu_id = usu_id
-      WHERE usu_id = $id";
+    $sql = "SELECT fechas.* FROM fechas 
+              INNER JOIN usuarios 
+              ON fech_usu_id = usu_id
+              WHERE usu_id = $id
+              ORDER BY fech_dia ASC";
     $query = mysqli_query($conn, $sql);
 ?>  
 
