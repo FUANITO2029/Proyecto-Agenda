@@ -36,13 +36,20 @@
         $sql_agregar = 'INSERT INTO usuarios(usu_nombre, usu_correo, usu_contrasena) VALUES (?,?,?)';
         $sentencia_agregar = $pdo->prepare($sql_agregar);
         $sentencia_agregar->execute(array($nuevo_usuario, $correo, $contrasena));
-        
+
+
+        $sql = 'SELECT * FROM usuarios WHERE usu_nombre = ?';
+        $sentencia_sql = $pdo->prepare($sql);
+        $sentencia_sql->execute(array($nuevo_usuario));
+        $resultado = $sentencia_sql->fetch();
+
         // Destruir las variables de conexión 
         $sentencia_agregar = null;
         $pdo = null;
         
         session_start();
         $_SESSION["uso_nombre"] = $nuevo_usuario;
+        $_SESSION["usu_id"] = $resultado["usu_id"];
 
         header('refresh:0, ./index.php');
     } 
