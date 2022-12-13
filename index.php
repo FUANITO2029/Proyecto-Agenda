@@ -10,9 +10,15 @@
         header('Location: acceder.php');
     }
 
-    include_once 'conexion.php';
-    
-
+    include_once 'conexion2.php';
+    $conn = conectar();
+    $id = $_SESSION["usu_id"];
+    $sql = "SELECT fechas.* 
+    FROM fechas 
+      INNER JOIN usuarios 
+        ON fech_usu_id = usu_id
+      WHERE usu_id = $id";
+    $query = mysqli_query($conn, $sql);
 ?>  
 
 <!DOCTYPE html>
@@ -88,7 +94,30 @@
         </div>
       </div>
       <div class="entradas">
-        
+        <?php
+              while($row = mysqli_fetch_array($query)){
+          ?>  
+          <table>
+            <tr>
+              <th> 
+                <?php echo $row['fech_titulo'] ?>
+              </th>
+            </tr>
+            <tr>
+              <td>
+                <?php echo $row['fech_des'] ?>
+              </td>
+              <td>
+                <?php echo $row['fech_dia'] ?>
+              </td>
+              <td>
+                <?php echo $row['fech_hora'] ?>
+              </td>
+            </tr>
+          </table>
+          <?php
+            }
+          ?>
       </div>
 
       <section class="modal">
