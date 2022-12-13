@@ -93,6 +93,7 @@ body{
 }
 
 .agenda-titulo{
+  color: white;
   width: 42%;
   display: flex;
   align-items: center;
