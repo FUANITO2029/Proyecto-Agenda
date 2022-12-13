@@ -1,5 +1,6 @@
 <?php
     include_once 'conexion.php';
+    $conn = conectar();
 
     $nuevo_usuario = $_POST['usu_nombre'];
     $correo = $_POST['usu_correo'];

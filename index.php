@@ -2,7 +2,7 @@
     
     session_start();
 
-    // Verificamos si hay sésion de usuairo
+    // Verificamos si hay sésion de usuario
     
     if (isset($_SESSION["uso_nombre"])){
         //print "<p>Bien venido $_SESSION[uso_nombre] <P>\n";
@@ -11,8 +11,15 @@
     }
 
     include_once 'conexion.php';
-    
-
+    include_once 'conexion2.php';
+    $conn = conectar();
+    $id = $_SESSION["usu_id"];
+    $sql = "SELECT fechas.* 
+    FROM fechas 
+      INNER JOIN usuarios 
+        ON fech_usu_id = usu_id
+      WHERE usu_id = $id";
+    $query = mysqli_query($conn, $sql);
 ?>  
 
 <!DOCTYPE html>
@@ -66,16 +73,9 @@
     <div class="principal">
       <div class="mes">
         <div class="botones">
-          <button class="sig-ant-btn">
-            <i class="fa-solid fa-angle-left fa-2xl">
-              <a href="#"></a>
-            </i>             
-          </button>
-          <button class="sig-ant-btn"> 
-            <i class="fa-solid fa-angle-right fa-2xl">
-              <a href="#"></a>
-            </i>
-          </button>
+          <select name="mes" id="mes">
+            <option value=""></option>
+          </select>
         </div>
         <div class="mes-nombre">
           Diciembre

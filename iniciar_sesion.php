@@ -17,6 +17,7 @@
     if ($contrasena == $resultado['usu_contrasena']){
       session_start();
       $_SESSION["uso_nombre"] = $usuario_login;
+      $_SESSION["usu_id"] = $resultado['usu_id'];
       header('Location: index.php');
     }else {
       echo 'CONTRASEÑA INCORRECTA';
