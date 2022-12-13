@@ -386,6 +386,7 @@ body{
   height: 50px;
   border-radius: 5px;
   margin: 4px;
+  padding: 10px;
   background-color:rgb(16, 7, 79); /* Green */
   border: none;
   color: white;

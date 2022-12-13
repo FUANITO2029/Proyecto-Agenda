@@ -1,17 +1,17 @@
 <?php
-include("conexion.php");
-$id = $_POST['fech_id'];
-$usuario = $_POST['fech_usu_id'];
+include("conexion2.php");
+$conn = conectar();
+$id = $_GET['id'];
+$usu = $_GET['usu'];
 
-$sql = "DELETE FROM fechas WHERE fech_id = ? AND fech_usu_id =?";
-$sentencia_eliminar = $pdo->prepare($sql);
-$sentencia_eliminar->execute(array($id, $usuario));
+$sql = "DELETE FROM fechas WHERE fech_id = '$id' AND fech_usu_id = '$usu'";
+$query = mysqli_query($conn, $sql);
 
-if($sentencia_eliminar){
+if($query){
     Header("Location: index.php");
 }
 else
 {
-    echo $sentencia_eliminar;
+    echo $query;
 }
 ?>
