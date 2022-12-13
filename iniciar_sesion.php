@@ -12,7 +12,7 @@
 
   if(!$resultado){
     echo 'EL USUARIO NO EXISTE';
-    header('refresh: 1, ./acceder.php');
+    header('refresh: 2, ./acceder.php');
   }else{
     if ($contrasena == $resultado['usu_contrasena']){
       session_start();

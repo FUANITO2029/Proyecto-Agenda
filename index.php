@@ -14,11 +14,11 @@
     include_once 'conexion2.php';
     $conn = conectar();
     $id = $_SESSION["usu_id"];
-    $sql = "SELECT fechas.* 
-    FROM fechas 
-      INNER JOIN usuarios 
-        ON fech_usu_id = usu_id
-      WHERE usu_id = $id";
+    $sql = "SELECT fechas.* FROM fechas 
+              INNER JOIN usuarios 
+              ON fech_usu_id = usu_id
+              WHERE usu_id = $id
+              ORDER BY fech_dia ASC";
     $query = mysqli_query($conn, $sql);
 ?>  
 
@@ -95,7 +95,7 @@
             <?php  for($i=2023;$i<=2040;$i++) { echo "<option value='".$i."'>".$i."</option>"; } ?>
           </select>
           <button class="btn-ent">
-            <i class="fa-solid fa-magnifying-glass fa-2xl"></i>
+          <i class="fa-solid fa-magnifying-glass fa-2xl"></i>
           </button>
         </div> -->
         <div class="agregar">
