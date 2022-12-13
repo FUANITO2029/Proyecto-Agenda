@@ -63,7 +63,7 @@
             <div class="clima-info">
               <h3><span class="temperatura" id="temperatura">23</span>°</h3>
               <h4 id="locacion">Salamanca</h4>
-              <h6>humedad: <span class="humedad" id="humedad">64</span>%</h6>
+              <h6>Humedad: <span class="humedad" id="humedad">64</span>%</h6>
             </div>
           </div>
         </div>
@@ -72,6 +72,9 @@
     </div>
     <div class="principal">
       <div class="mes">
+        <div class="agenda-titulo">
+          <h1>Agenda Personal</h1>
+        </div>
         <div class="selects">
           <select name="mes" id="mes" class="select-css">
             <option value="01">Enero</option>
@@ -88,8 +91,8 @@
             <option value="12">Diciembre</option>
           </select>
           <select name="anio" id="anio" class="select-css">
-            <option value="0">Año</option>
-            <?php  for($i=1990;$i<=2030;$i++) { echo "<option value='".$i."'>".$i."</option>"; } ?>
+            <option value="0">2022</option>
+            <?php  for($i=2023;$i<=2040;$i++) { echo "<option value='".$i."'>".$i."</option>"; } ?>
           </select>
           <button class="btn-ent">
           <i class="fa-solid fa-magnifying-glass fa-2xl"></i>
@@ -115,8 +118,8 @@
                 <div class="ent-hora"><?php echo $row['fech_hora'] ?></div>
               </div>
               <div class="btns-ent">
-                <button class="btn-ent"> <i class="fa-solid fa-pen-to-square fa-xl"></i> </button>
-                <button class="btn-ent"> <i class="fa-solid fa-trash fa-xl"></i> </i></button>
+                <a href="actualizar.php?id=<?php echo $row['fech_id'] ?>&usu=<? echo $row['fech_usu_id']?>" class="btn-ent"> <i class="fa-solid fa-pen-to-square fa-xl"></i> </a>
+                <a href="delete.php?id=<?php echo $row['fech_id'] ?>&usu=<? echo $row['fech_usu_id']?>" class="btn-ent"> <i class="fa-solid fa-trash fa-xl"></i> </i></a>
               </div>
           </div>
           </div>
