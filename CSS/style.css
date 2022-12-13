@@ -160,13 +160,7 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.entradas {
-  height: 80%;
-  width: 95%;
-  margin: 15px;
-  box-sizing: border-box;
+  color: white;
 }
 
 .clima-container{
@@ -280,4 +274,119 @@ body{
 .cancel:hover{
   background: #ff9800;
   color: white;
+}
+
+.entradas {
+  height: 80%;
+  width: 95%;
+  margin: 15px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.entrada{
+  height: auto;
+  width: 98%;
+  margin: 5px 0px;
+  padding: 2px;
+  background-color: rgb(57, 12, 125);
+  border-radius: 8px;
+  border: solid 2px black;
+}
+
+.ent-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.ent-titulo{
+  height: auto;
+  background-color: rgb(81, 29, 159);
+  border: solid 1px black;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  margin: 12px 15px 12px 20px;
+  padding: 10px;
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+  font-weight: 400;
+
+}
+
+.ent-det{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  align-items: center;
+}
+
+.hora-fech{
+  display:flex;
+}
+
+.ent-fecha{
+  color: white;
+  height: 55px;
+  width: 115px;
+  display: inline-block;
+  border-radius: 5px;
+  margin: 5px 5px; 
+  padding: 10px 15px 10px 15px;
+  background-color: rgb(71, 15, 144);
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.ent-hora{
+  height: 55px;
+  display: inline-block;
+  border-radius: 5px;
+  margin: 5px 5px; 
+  padding: 10px 15px 10px 15px;
+  display: flex;
+  align-items: center;
+  background-color: rgb(71, 15, 144);
+  color: white;
+  font-size: 20px;
+}
+
+.btns-ent{
+  margin: 12px 30px 12px 5px;  
+}
+
+.btn-ent{
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  margin: 4px;
+  background-color:rgb(16, 7, 79); /* Green */
+  border: none;
+  color: white;
+  transition-duration: 0.4s;
+}
+
+.btn-ent:hover {
+  background-color: white;
+  border: 1px solid; 
+  border-color: black;
+  color: black;
+}
+
+.ent-desc{
+  height: auto;
+  display: inline-block;
+  border-radius: 5px;
+  margin: 0px 12px 12px 12px; 
+  padding: 12px;
+  background-color: rgb(38, 21, 86);
+  color: white;
+  font-weight: 300;
 }

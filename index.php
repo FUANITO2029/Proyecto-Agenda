@@ -55,7 +55,7 @@
       <!-- API -->
       <div class="parte-inferior">
         <div class="clima">
-          <div>-</div>
+          <div></div>
           <div class="clima-container">
             <div class="clima-icon-div" id="icono">
               <i class="fas fa-cloud clima-icon" ></i>
@@ -100,32 +100,26 @@
         </div>
       </div>
       <div class="entradas">
-        <?php
-              while($row = mysqli_fetch_array($query)){
-          ?>  
-          <table>
-            <tr>
-              <th> 
-                <?php echo $row['fech_titulo'] ?>
-              </th>
-            </tr>
-            <tr>
-              <td>
-                <?php echo $row['fech_des'] ?>
-              </td>
-              <td>
-                <?php echo $row['fech_dia'] ?>
-              </td>
-              <td>
-                <?php echo $row['fech_hora'] ?>
-              </td>
-            </tr>
-          </table>
-          <?php
-            }
-          ?>
+        <div class="entrada">
+          <div class="ent-header">
+            <div class="ent-titulo"><p> Lorem acilis. Facilis, perferendis!</p></div>
+            <div class="ent-det">
+              <div class="hora-fech">
+                <div class="ent-fecha">10-12-22</div>
+                <div class="ent-hora">18:00:00</div>
+              </div>
+              <div class="btns-ent">
+                <button class="btn-ent"> <i class="fa-solid fa-pen-to-square fa-xl"></i> </button>
+                <button class="btn-ent"> <i class="fa-solid fa-trash fa-xl"></i> </i></button>
+              </div>
+          </div>
+          </div>
+          <div class="ent-desc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero minus, necessitatibus quia laudantium incidunt ratione sapiente, eius provident perferendis voluptatibus dicta culpa et doloribus sint iure voluptas maiores vel aspernatur!
+          </div>
+          
+        </div>
       </div>
-
       <section class="modal">
         <div class="modal-container">
           <form action="agregar_evento.php" method="POST" class="form-modal">
