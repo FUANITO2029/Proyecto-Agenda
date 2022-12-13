@@ -93,15 +93,19 @@ body{
 
 .selects{
   width: 60%;
+  height: 100%;
   display: flex;
-  flex-direction: row;
   flex-wrap: nowrap;
   padding: 20px;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-.select{
-  width: 50%;
-  height: 100%;
+.select-css{
+  width: 30%;
+  height: 35px;
+  border-radius: 10px;
 }
 
 .sig-ant-btn{
@@ -124,15 +128,17 @@ body{
 }
 
 .agregar{
-  width: 10%;
+  width: 40%;
+  height: 100%;
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  align-items: center;
   padding: 20px;
 }
 
 .btn-agregar{
   width: 100%;
+  height: 50px;
   margin: 1px;
   border-radius: 5px;
   background-color:rgb(16, 7, 79); 

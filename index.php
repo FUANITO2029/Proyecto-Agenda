@@ -91,6 +91,9 @@
             <option value="0">Año</option>
             <?php  for($i=1990;$i<=2030;$i++) { echo "<option value='".$i."'>".$i."</option>"; } ?>
           </select>
+          <button class="btn-ent">
+            <i class="fa-solid fa-magnifying-glass fa-2xl"></i>
+          </button>
         </div>
         <div class="agregar">
           <button class="btn-agregar">
